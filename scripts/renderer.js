@@ -62,6 +62,7 @@ class Renderer {
     let p6 = {x: 500, y: 300};
     let p7 = {x: 600, y: 400};
     this.drawBezierCurve(p4, p5, p6, p7, this.num_curve_sections, [0, 0, 255, 255], framebuffer);
+
     if(this.show_points){
     this.drawVertex({x: 300, y: 600}, [200, 120, 220, 255], framebuffer);
     this.drawVertex({x: 500, y: 300}, [200, 120, 220, 255], framebuffer);
@@ -86,8 +87,8 @@ class Renderer {
         this.drawCircle(center2, radius2, this.num_curve_sections, [0, 0, 255, 255], framebuffer);
 
 	if(this.show_points){
-    this.drawVertex(center1, [200, 120, 220, 255], framebuffer);
-    this.drawVertex(center2, [200, 120, 220, 255], framebuffer);
+    this.drawVertex(center1, [200, 0, 0, 255], framebuffer);
+    this.drawVertex(center2, [200, 0, 0, 255], framebuffer);
     }
 
 
