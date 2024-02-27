@@ -55,12 +55,19 @@ class Renderer {
     let p2 = {x: 400, y: 200};
     let p3 = {x: 500, y: 300};
     this.drawBezierCurve(p0, p1, p2, p3, this.num_curve_sections, [255, 0, 0, 255], framebuffer);
+    
 
     let p4 = {x: 200, y: 400};
     let p5 = {x: 300, y: 600};
     let p6 = {x: 500, y: 300};
     let p7 = {x: 600, y: 400};
     this.drawBezierCurve(p4, p5, p6, p7, this.num_curve_sections, [0, 0, 255, 255], framebuffer);
+    if(this.show_points){
+    this.drawVertex({x: 300, y: 600}, [200, 120, 220, 255], framebuffer);
+    this.drawVertex({x: 500, y: 300}, [200, 120, 220, 255], framebuffer);
+    this.drawVertex({x: 200, y: 100}, [200, 120, 220, 255], framebuffer);
+    this.drawVertex({x: 400, y: 200}, [200, 120, 220, 255], framebuffer);
+    }
 
 }
 
@@ -71,11 +78,17 @@ class Renderer {
         let center1 = {x: 200, y: 200};
         let radius1 = 50;
         this.drawCircle(center1, radius1, this.num_curve_sections, [255, 0, 0, 255], framebuffer);
+	
     
         
         let center2 = {x: 400, y: 300};
         let radius2 = 80;
         this.drawCircle(center2, radius2, this.num_curve_sections, [0, 0, 255, 255], framebuffer);
+
+	if(this.show_points){
+    this.drawVertex(center1, [200, 120, 220, 255], framebuffer);
+    this.drawVertex(center2, [200, 120, 220, 255], framebuffer);
+    }
 
 
     }
